@@ -17,7 +17,7 @@ typedef enum
 typedef struct token_t
 {
     tokens tokenID;
-    char[8] tokenInstance;
+    char tokenInstance[8];
     int line;
 } token;
 
