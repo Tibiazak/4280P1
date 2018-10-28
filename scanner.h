@@ -4,5 +4,8 @@
 
 #ifndef SCANNER_H
 #define SCANNER_H
+
+#include "token.h"
+#include <stdio.h>
 token scan(FILE * fp);
 #endif //SCANNER_H
