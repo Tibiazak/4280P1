@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "token.h"
-#include <scanner.h>
+#include "scanner.h"
 
 int main(int argc, char * argv[])
 {
