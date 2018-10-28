@@ -6,6 +6,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <token.h>
+#include <scanner.h>
 
 int main(int argc, char * argv[])
 {
@@ -51,6 +53,9 @@ int main(int argc, char * argv[])
         printf("Error, invalid file!\n");
         exit(1);
     }
+
+    token newtoken = scan(fp);
+
 
     // Close the file unless the file is stdin
     if (fp != stdin)
