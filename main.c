@@ -8,6 +8,7 @@
 #include <string.h>
 #include "token.h"
 #include "scanner.h"
+#include <stdbool.h>
 
 int main(int argc, char * argv[])
 {
@@ -55,11 +56,19 @@ int main(int argc, char * argv[])
     }
 
     token newtoken;
-    do {
+    bool done = false;
+    while(!done)
+    {
         newtoken = scan(fp);
-        printf("%s\n", newtoken.tokenInstance);
-    } while(newtoken.line != EOF);
-
+        if(newtoken.line = EOF)
+        {
+            done = true;
+        }
+        else
+        {
+            printf("%s\n", newtoken.tokenInstance);
+        }
+    }
     // Close the file unless the file is stdin
     if (fp != stdin)
     {
