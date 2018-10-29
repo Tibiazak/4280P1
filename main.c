@@ -60,7 +60,7 @@ int main(int argc, char * argv[])
     while(!done)
     {
         newtoken = scan(fp);
-        if(newtoken.line = EOF)
+        if(newtoken.line == EOF)
         {
             done = true;
         }
