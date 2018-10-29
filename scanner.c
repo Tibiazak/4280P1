@@ -10,6 +10,7 @@
 token scan(FILE * fp)
 {
     char tok[8];
+    char tokenArr[33];
     token newtoken;
     int i;
 
