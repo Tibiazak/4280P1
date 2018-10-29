@@ -7,5 +7,5 @@
 
 #include "token.h"
 #include <stdio.h>
-token scan(FILE * fp);
+token scan(FILE *);
 #endif //SCANNER_H
