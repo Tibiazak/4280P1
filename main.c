@@ -60,7 +60,7 @@ int main(int argc, char * argv[])
     while(!done)
     {
         newtoken = scan(fp);
-        if(newtoken.tokenID = eofTk)
+        if(newtoken.tokenID == eofTk)
         {
             done = true;
         }
