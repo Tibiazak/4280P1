@@ -14,7 +14,7 @@ token scan(FILE * fp)
 
     if(fscanf(fp, "%s", tok) == EOF)
     {
-        newtoken.tokenInstance = EOF;
+        newtoken.line = EOF;
         return newtoken;
     }
 

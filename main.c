@@ -58,7 +58,7 @@ int main(int argc, char * argv[])
     do {
         newtoken = scan(fp);
         printf("%s\n", newtoken.tokenInstance);
-    } while(newtoken.tokenInstance != EOF);
+    } while(newtoken.line != EOF);
 
     // Close the file unless the file is stdin
     if (fp != stdin)
