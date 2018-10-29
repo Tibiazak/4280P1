@@ -10,9 +10,14 @@
 token scan(FILE * fp)
 {
     char tok[8];
-    fscanf(fp, "%s", tok);
-
     token newtoken;
+
+    if(fscanf(fp, "%s", tok) == EOF)
+    {
+        newtoken.tokenInstance = EOF;
+        return newtoken;
+    }
+
     newtoken.line = 0;
     strcpy(newtoken.tokenInstance, tok);
     return newtoken;
