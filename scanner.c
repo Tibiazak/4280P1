@@ -9,16 +9,27 @@
 
 token scan(FILE * fp)
 {
+    char * tokenArr[33];
     char tok[8];
     token newtoken;
+    int i;
 
     if(fscanf(fp, "%s", tok) == EOF)
     {
-        newtoken.line = EOF;
+        newtoken.tokenID = eofTk;
+        strcpy(newtoken.tokenInstance, tokenArr[newtoken.tokenID]);
         return newtoken;
     }
 
     newtoken.line = 0;
-    strcpy(newtoken.tokenInstance, tok);
+    for (i = 0; i < 33; i++)
+    {
+        newtoken.tokenID = i;
+        if(strcmp(tokenArr[i], tok))
+        {
+            strcpy(newtoken.tokenInstance, tokenArr[i]);
+            return newtoken;
+        }
+    }
     return newtoken;
 }

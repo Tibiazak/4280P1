@@ -14,6 +14,11 @@ typedef enum
     openbracketTk, closebracketTk, identifierTk, integerTk, eofTk
 } tokens;
 
+
+extern char * tokenArr[33] = {"begin", "end", "iter", "void", "var", "return", "read", "print",
+                              "program", "cond", "then", "let", "=", ">", "<", ":", "+", "-", "*",
+                              "/", "%", ".", "(", ")", ",", "{", "}", ";", "[", "]", "identifier", "integer", "EOF"};
+
 typedef struct token_t
 {
     tokens tokenID;
