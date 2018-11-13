@@ -29,10 +29,10 @@ token scan(FILE * fp)
     for (i = 0; i < 33; i++)
     {
         newtoken.tokenID = i;
-        printf("Comparing current token %s to ID %s\n", tok, tokenArr[i]);
+//        printf("Comparing current token %s to ID %s\n", tok, tokenArr[i]);
         if(strcmp(tokenArr[i], tok) == 0)
         {
-            printf("Tokens are equal\n");
+//            printf("Tokens are equal\n");
             strcpy(newtoken.tokenInstance, tokenArr[i]);
             return newtoken;
         }
