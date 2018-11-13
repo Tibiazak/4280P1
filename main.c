@@ -62,6 +62,7 @@ int main(int argc, char * argv[])
         newtoken = scan(fp);
         if(newtoken.tokenID == eofTk)
         {
+            printf("%s\n", newtoken.tokenID);
             done = true;
         }
         else
