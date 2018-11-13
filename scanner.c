@@ -14,7 +14,6 @@ char * tokenArr[33] = {"begin", "end", "iter", "void", "var", "return", "read", 
 token scan(FILE * fp)
 {
     char tok[8];
-    tokenArr;
     token newtoken;
     int i;
 
@@ -29,7 +28,7 @@ token scan(FILE * fp)
     for (i = 0; i < 33; i++)
     {
         newtoken.tokenID = i;
-        if(strcmp(tokenArr[i], tok))
+        if(strcmp(tokenArr[i], tok) != 0)
         {
             strcpy(newtoken.tokenInstance, tokenArr[i]);
             return newtoken;
