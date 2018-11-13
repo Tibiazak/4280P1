@@ -15,8 +15,6 @@ typedef enum
 } tokens;
 
 
-extern char * tokenArr[33];
-
 typedef struct token_t
 {
     tokens tokenID;

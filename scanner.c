@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-tokenArr = {"begin", "end", "iter", "void", "var", "return", "read", "print",
+char * tokenArr[33] = {"begin", "end", "iter", "void", "var", "return", "read", "print",
 "program", "cond", "then", "let", "=", ">", "<", ":", "+", "-", "*",
 "/", "%", ".", "(", ")", ",", "{", "}", ";", "[", "]", "identifier", "integer", "EOF"};
 
