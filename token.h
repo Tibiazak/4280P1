@@ -15,9 +15,7 @@ typedef enum
 } tokens;
 
 
-extern const char * tokenArr[33] = {"begin", "end", "iter", "void", "var", "return", "read", "print",
-                              "program", "cond", "then", "let", "=", ">", "<", ":", "+", "-", "*",
-                              "/", "%", ".", "(", ")", ",", "{", "}", ";", "[", "]", "identifier", "integer", "EOF"};
+extern char * tokenArr[33];
 
 typedef struct token_t
 {

@@ -7,6 +7,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+tokenArr = {"begin", "end", "iter", "void", "var", "return", "read", "print",
+"program", "cond", "then", "let", "=", ">", "<", ":", "+", "-", "*",
+"/", "%", ".", "(", ")", ",", "{", "}", ";", "[", "]", "identifier", "integer", "EOF"};
+
 token scan(FILE * fp)
 {
     char tok[8];
