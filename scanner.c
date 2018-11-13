@@ -25,11 +25,14 @@ token scan(FILE * fp)
     }
 
     newtoken.line = 0;
+    printf("Token is %s\n", tok);
     for (i = 0; i < 33; i++)
     {
         newtoken.tokenID = i;
+        printf("Comparing current token %s to ID %s\n", tok, tokenArr[i]);
         if(strcmp(tokenArr[i], tok) != 0)
         {
+            printf("Tokens are equal\n");
             strcpy(newtoken.tokenInstance, tokenArr[i]);
             return newtoken;
         }
