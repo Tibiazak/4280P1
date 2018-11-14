@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 char * tokenArr[33] = {"begin", "end", "iter", "void", "var", "return", "read", "print",
 "program", "cond", "then", "let", "=", ">", "<", ":", "+", "-", "*",
@@ -26,7 +27,7 @@ token scan(FILE * fp)
 
     newtoken.line = 0;
     printf("Token is %s\n", tok);
-    for (i = 0; i < 33; i++)
+    for (i = 0; i < 30; i++)
     {
         newtoken.tokenID = i;
 //        printf("Comparing current token %s to ID %s\n", tok, tokenArr[i]);
@@ -36,6 +37,34 @@ token scan(FILE * fp)
             strcpy(newtoken.tokenInstance, tokenArr[i]);
             return newtoken;
         }
+    }
+
+    if(isdigit(tok[0]))
+    {
+        for(i = 0; i < 8; i++)
+        {
+            if(!isdigit(tok[i]))
+            {
+                printf("Error, invalid integer!\n");
+                fclose(fp);
+                exit(1);
+            }
+        }
+        newtoken.tokenID = integerTk;
+        strcpy(newtoken.tokenInstance, tokenArr[newtoken.tokenID]);
+        return newtoken;
+    }
+    if(isalpha(tok[0]))
+    {
+        if(islower(tok[0]))
+        {
+            newtoken.tokenID = identifierTk;
+            strcpy(newtoken.tokenInstance, tokenArr[newtoken.tokenID]);
+            return newtoken;
+        }
+        printf("Error, invalid identifier\n");
+        fclose(fp);
+        exit(1);
     }
     return newtoken;
 }
