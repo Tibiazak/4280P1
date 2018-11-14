@@ -34,7 +34,7 @@ token scan(FILE * fp)
         if(strcmp(tokenArr[i], tok) == 0)
         {
 //            printf("Tokens are equal\n");
-            strcpy(newtoken.tokenInstance, tokenArr[i]);
+            strcpy(newtoken.tokenInstance, tok);
             return newtoken;
         }
     }
@@ -51,7 +51,7 @@ token scan(FILE * fp)
             }
         }
         newtoken.tokenID = integerTk;
-        strcpy(newtoken.tokenInstance, tokenArr[newtoken.tokenID]);
+        strcpy(newtoken.tokenInstance, tok);
         return newtoken;
     }
     if(isalpha(tok[0]))
@@ -59,7 +59,7 @@ token scan(FILE * fp)
         if(islower(tok[0]))
         {
             newtoken.tokenID = identifierTk;
-            strcpy(newtoken.tokenInstance, tokenArr[newtoken.tokenID]);
+            strcpy(newtoken.tokenInstance, tok);
             return newtoken;
         }
         printf("Error, invalid identifier\n");
