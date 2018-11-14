@@ -45,6 +45,7 @@ token scan(FILE * fp)
         {
             if((tok[i] != '\0') && (!isdigit(tok[i])))
             {
+                printf("character is: %c\n", tok[i]);
                 printf("Error, invalid integer!\n");
                 fclose(fp);
                 exit(1);
