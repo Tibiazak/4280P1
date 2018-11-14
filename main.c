@@ -62,12 +62,12 @@ int main(int argc, char * argv[])
         newtoken = scan(fp);
         if(newtoken.tokenID == eofTk)
         {
-            printf("%s\n", newtoken.tokenInstance);
+            printf("%s %s\n", newtoken.tokenID, newtoken.tokenInstance);
             done = true;
         }
         else
         {
-            printf("%s\n", newtoken.tokenInstance);
+            printf("%s %s\n", newtoken.tokenID, newtoken.tokenInstance);
         }
     }
     // Close the file unless the file is stdin
