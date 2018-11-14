@@ -8,7 +8,7 @@
 #include <string.h>
 #include <ctype.h>
 
-char * tokenArr[33] = {"begin", "end", "iter", "void", "var", "return", "read", "print",
+char * tokenArr[] = {"begin", "end", "iter", "void", "var", "return", "read", "print",
 "program", "cond", "then", "let", "=", ">", "<", ":", "+", "-", "*",
 "/", "%", ".", "(", ")", ",", "{", "}", ";", "[", "]", "identifier", "integer", "EOF"};
 
